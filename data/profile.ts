@@ -9,6 +9,7 @@ export const profile = {
   cv: "/cv.pdf",
   email: "mfikrihaikalayatullah154@gmail.com",
   github: "https://github.com/MFikriHaikalAyatullah12",
+  linkedin: "https://www.linkedin.com/in/m-fikri-haikal-ayatullah",
   summary:
     "Lulusan Teknik Informatika dengan fokus Pengembangan Front-End dan Desain UI/UX. Membangun aplikasi web modern yang responsif dengan Next.js dan TypeScript, didukung kemampuan analisis data menggunakan Python dan SQL, serta pengalaman praktis dalam administrasi dan pemrosesan data keuangan.",
   // Gunakan **teks** untuk penekanan tebal.

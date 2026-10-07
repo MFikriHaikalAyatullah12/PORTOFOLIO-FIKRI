@@ -3,6 +3,7 @@ import { Mail } from "lucide-react";
 import SectionTitle from "@/components/SectionTitle";
 import IconButton from "@/components/IconButton";
 import GithubIcon from "@/components/GithubIcon";
+import LinkedinIcon from "@/components/LinkedinIcon";
 import { profile } from "@/data/profile";
 
 export const metadata: Metadata = { title: "Kontak" };
@@ -21,6 +22,7 @@ export default function KontakPage() {
         />
         <div className="grid gap-4">
           <IconButton href={profile.github} icon={GithubIcon} label="GitHub" value={profile.github.replace("https://", "")} />
+          <IconButton href={profile.linkedin} icon={LinkedinIcon} label="LinkedIn" value={profile.linkedin.replace("https://www.", "")} />
           <IconButton icon={Mail} label="Gmail" value={profile.email} />
         </div>
       </div>
