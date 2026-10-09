@@ -19,6 +19,10 @@ const targets = [
 // About content is merged into "/" via print-only markup, so /tentang is skipped.
 const routes = ["/", "/project", "/sertifikasi", "/skill", "/kontak"];
 const PAGE_WIDTH = 1280;
+// Raster images are re-encoded in-page before printing so the PDF doesn't embed full-size PNG sources.
+const IMAGE_SCALE = 1.5;
+const IMAGE_MAX_WIDTH = 1200;
+const IMAGE_JPEG_QUALITY = 0.82;
 
 const browserCandidates = [
   process.env.BROWSER_PATH,
@@ -89,7 +93,8 @@ async function main() {
     const page = await browser.newPage();
     // Force dark theme before next-themes reads localStorage.
     await page.evaluateOnNewDocument(() => localStorage.setItem("theme", "dark"));
-    await page.setViewport({ width: PAGE_WIDTH, height: 900, deviceScaleFactor: 2 });
+    // DPR 1: text/vectors stay crisp regardless; DPR 2 only inflates rasterized effects.
+    await page.setViewport({ width: PAGE_WIDTH, height: 900, deviceScaleFactor: 1 });
     await page.emulateMediaType("print");
 
     const merged = await PDFDocument.create();
@@ -105,6 +110,31 @@ async function main() {
           timeout,
         ]);
       });
+      await page.evaluate(
+        async ({ scale, maxWidth, quality }) => {
+          const imgs = Array.from(document.images).filter((img) => img.complete && img.naturalWidth > 0 && img.offsetParent !== null);
+          await Promise.all(
+            imgs.map(async (img) => {
+              const rect = img.getBoundingClientRect();
+              const target = Math.min(maxWidth, Math.round(rect.width * scale));
+              if (!target || target >= img.naturalWidth) return;
+              const canvas = document.createElement("canvas");
+              canvas.width = target;
+              canvas.height = Math.round((img.naturalHeight * target) / img.naturalWidth);
+              const ctx = canvas.getContext("2d");
+              ctx.fillStyle = "#fff";
+              ctx.fillRect(0, 0, canvas.width, canvas.height);
+              ctx.drawImage(img, 0, 0, canvas.width, canvas.height);
+              const next = new Promise((r) => img.addEventListener("load", r, { once: true }));
+              img.removeAttribute("srcset");
+              img.removeAttribute("sizes");
+              img.src = canvas.toDataURL("image/jpeg", quality);
+              await next;
+            }),
+          );
+        },
+        { scale: IMAGE_SCALE, maxWidth: IMAGE_MAX_WIDTH, quality: IMAGE_JPEG_QUALITY },
+      );
       const height = await page.evaluate(() =>
         Math.ceil(Math.max(document.documentElement.scrollHeight, document.body.scrollHeight, document.querySelector("main")?.getBoundingClientRect().bottom ?? 0)),
       );

@@ -108,7 +108,13 @@ h1, h2, h3, h4 {
     transition: none !important;
     -webkit-print-color-adjust: exact;
     print-color-adjust: exact;
+    /* Shadows, blurs and masks become PDF soft masks/transparency groups that make viewers render slowly. */
+    box-shadow: none !important;
+    backdrop-filter: none !important;
+    filter: none !important;
+    mask-image: none !important;
   }
+  .grid-bg { display: none !important; }
   [data-print-hide] { display: none !important; }
   .lg\:sticky { position: static !important; }
 }
