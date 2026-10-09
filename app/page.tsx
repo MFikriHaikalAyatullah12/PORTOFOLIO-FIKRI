@@ -1,12 +1,20 @@
 import Image from "next/image";
 import Link from "next/link";
-import { ArrowRight, FileText, MapPin } from "lucide-react";
-import { profile } from "@/data/profile";
+import { ArrowRight, Download, FileText, GraduationCap, MapPin } from "lucide-react";
+import { education, profile } from "@/data/profile";
 import { projects } from "@/data/projects";
+import { certificates } from "@/data/certificates";
 import ProjectCard from "@/components/ProjectCard";
+import RichText from "@/components/RichText";
 
 export default function Home() {
   const featured = projects.slice(0, 3);
+  // Shown only in the PDF export, where the About page is merged into this page.
+  const stats = [
+    { value: `${projects.length}+`, label: "Projects" },
+    { value: `${certificates.length}`, label: "Certifications" },
+    { value: "4", label: "Areas of expertise" },
+  ];
 
   return (
     <>
@@ -18,16 +26,31 @@ export default function Home() {
               <MapPin size={12} className="text-accent" aria-hidden /> {profile.location}
             </p>
             <h1 className="text-4xl font-extrabold leading-[1.08] sm:text-5xl lg:text-[3.5rem]">
-              Halo, saya <span className="text-accent">{profile.name}</span>.
+              Hi, I&apos;m <span className="text-accent">{profile.name}</span>.
             </h1>
             <p className="mt-4 font-display text-lg font-semibold text-muted-foreground sm:text-xl">{profile.tagline}</p>
-            <p className="mt-5 max-w-xl text-base leading-relaxed text-muted-foreground">{profile.summary}</p>
-            <div className="mt-8 flex flex-wrap gap-3">
+            <p className="mt-5 max-w-xl text-base leading-relaxed text-muted-foreground print:hidden">{profile.summary}</p>
+            <RichText text={profile.about} className="mt-5 hidden text-base leading-relaxed text-muted-foreground print:block" />
+            <div className="mt-8 hidden print:block">
+              <h2 className="flex items-center gap-2 text-lg font-bold">
+                <GraduationCap size={20} className="text-accent" aria-hidden /> Education
+              </h2>
+              <ul className="mt-4 space-y-3">
+                {education.map((e) => (
+                  <li key={e.institution} className="rounded-xl border border-border bg-card p-5">
+                    <p className="text-xs font-semibold uppercase tracking-wider text-accent">{e.period}</p>
+                    <p className="mt-1 font-bold">{e.degree}</p>
+                    <p className="text-sm text-muted-foreground">{e.institution}</p>
+                  </li>
+                ))}
+              </ul>
+            </div>
+            <div data-print-hide className="mt-8 flex flex-wrap gap-3">
               <Link
                 href="/project"
                 className="inline-flex min-h-12 items-center gap-2 rounded-md bg-primary px-6 text-sm font-semibold text-on-primary transition-colors duration-200 hover:bg-accent hover:text-on-accent"
               >
-                Lihat Project <ArrowRight size={16} aria-hidden />
+                View Projects <ArrowRight size={16} aria-hidden />
               </Link>
               <a
                 href={profile.cv}
@@ -35,7 +58,14 @@ export default function Home() {
                 rel="noopener noreferrer"
                 className="inline-flex min-h-12 items-center gap-2 rounded-md border border-border bg-card px-6 text-sm font-semibold transition-colors duration-200 hover:border-primary"
               >
-                <FileText size={16} aria-hidden /> Lihat CV
+                <FileText size={16} aria-hidden /> View CV
+              </a>
+              <a
+                href="/portfolio.pdf"
+                download="Portfolio - M. Fikri Haikal Ayatullah.pdf"
+                className="inline-flex min-h-12 items-center gap-2 rounded-md border border-border bg-card px-6 text-sm font-semibold transition-colors duration-200 hover:border-primary"
+              >
+                <Download size={16} aria-hidden /> Download Portfolio PDF
               </a>
             </div>
           </div>
@@ -47,7 +77,7 @@ export default function Home() {
               <div className="relative aspect-square overflow-hidden rounded-2xl bg-muted shadow-xl ring-1 ring-border">
                 <Image
                   src={profile.photo}
-                  alt={`Foto ${profile.name}`}
+                  alt={`Photo of ${profile.name}`}
                   fill
                   priority
                   sizes="(min-width: 640px) 320px, 280px"
@@ -55,13 +85,21 @@ export default function Home() {
                 />
               </div>
             </div>
-            <div className="mt-6 flex items-center gap-3 rounded-xl border border-border bg-card px-4 py-3 shadow-sm">
+            <div className="mt-6 flex items-center gap-3 rounded-xl border border-border bg-card px-4 py-3 shadow-sm print:hidden">
               <span aria-hidden className="h-2.5 w-2.5 shrink-0 rounded-full bg-emerald-500" />
               <div>
-                <p className="text-xs font-semibold uppercase tracking-wider text-accent">Terbuka untuk</p>
-                <p className="text-sm font-bold">Kerja Full-time (WFH, WFO & Hybrid)</p>
+                <p className="text-xs font-semibold uppercase tracking-wider text-accent">Open to</p>
+                <p className="text-sm font-bold">Full-time Work (Remote, On-site & Hybrid)</p>
               </div>
             </div>
+            <ul className="mt-8 hidden grid-cols-3 divide-x divide-border rounded-xl border border-border bg-card shadow-sm print:grid">
+              {stats.map((s) => (
+                <li key={s.label} className="px-2 py-4 text-center">
+                  <p className="font-display text-2xl font-extrabold text-accent">{s.value}</p>
+                  <p className="text-xs text-muted-foreground">{s.label}</p>
+                </li>
+              ))}
+            </ul>
           </div>
         </div>
       </section>
@@ -78,14 +116,14 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="mx-auto max-w-6xl px-5 py-16 sm:px-8 md:py-24">
+      <section data-print-hide className="mx-auto max-w-6xl px-5 py-16 sm:px-8 md:py-24">
         <div className="mb-10 flex flex-wrap items-end justify-between gap-4">
           <div>
-            <p className="mb-2 text-xs font-semibold uppercase tracking-[0.2em] text-accent">Project Pilihan</p>
-            <h2 className="text-3xl font-bold sm:text-4xl">Karya terbaru</h2>
+            <p className="mb-2 text-xs font-semibold uppercase tracking-[0.2em] text-accent">Featured Projects</p>
+            <h2 className="text-3xl font-bold sm:text-4xl">Latest work</h2>
           </div>
-          <Link href="/project" className="inline-flex items-center gap-1 text-sm font-semibold text-accent hover:underline">
-            Semua project <ArrowRight size={16} aria-hidden />
+          <Link data-print-hide href="/project" className="inline-flex items-center gap-1 text-sm font-semibold text-accent hover:underline">
+            All projects <ArrowRight size={16} aria-hidden />
           </Link>
         </div>
         <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">

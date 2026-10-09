@@ -97,3 +97,18 @@ h1, h2, h3, h4 {
   .animate-fade-up { animation: none; }
   *, *::before, *::after { transition-duration: 0.01ms !important; }
 }
+
+/* Print / PDF export: one route per page, no navigation or action buttons. */
+@media print {
+  @page { margin: 0; }
+  html { scroll-behavior: auto; }
+  body { transition: none; }
+  *, *::before, *::after {
+    animation: none !important;
+    transition: none !important;
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
+  }
+  [data-print-hide] { display: none !important; }
+  .lg\:sticky { position: static !important; }
+}

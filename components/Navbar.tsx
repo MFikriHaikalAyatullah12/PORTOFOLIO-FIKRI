@@ -8,12 +8,12 @@ import { profile } from "@/data/profile";
 import ThemeToggle from "./ThemeToggle";
 
 const links = [
-  { href: "/", label: "Beranda" },
-  { href: "/tentang", label: "Tentang" },
-  { href: "/project", label: "Project" },
-  { href: "/sertifikasi", label: "Sertifikasi" },
-  { href: "/skill", label: "Skill" },
-  { href: "/kontak", label: "Kontak" },
+  { href: "/", label: "Home" },
+  { href: "/tentang", label: "About" },
+  { href: "/project", label: "Projects" },
+  { href: "/sertifikasi", label: "Certifications" },
+  { href: "/skill", label: "Skills" },
+  { href: "/kontak", label: "Contact" },
 ];
 
 export default function Navbar() {
@@ -24,7 +24,7 @@ export default function Navbar() {
     href === "/" ? pathname === "/" : pathname.startsWith(href);
 
   return (
-    <header className="sticky top-0 z-50 border-b border-border bg-background/85 backdrop-blur">
+    <header data-print-hide className="sticky top-0 z-50 border-b border-border bg-background/85 backdrop-blur">
       <nav className="mx-auto flex h-16 max-w-6xl items-center justify-between px-5 sm:px-8">
         <Link
           href="/"
@@ -63,7 +63,7 @@ export default function Navbar() {
             onClick={() => setOpen((v) => !v)}
             aria-expanded={open}
             aria-controls="mobile-menu"
-            aria-label={open ? "Tutup menu" : "Buka menu"}
+            aria-label={open ? "Close menu" : "Open menu"}
             className="flex h-11 w-11 items-center justify-center rounded-md border border-border bg-card"
           >
             {open ? <X size={20} /> : <Menu size={20} />}

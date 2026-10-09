@@ -20,7 +20,7 @@ const body = Space_Grotesk({
 
 export const metadata: Metadata = {
   title: {
-    default: `${profile.name} — Portofolio`,
+    default: `${profile.name} — Portfolio`,
     template: `%s · ${profile.shortName}`,
   },
   description: profile.summary,
@@ -28,7 +28,7 @@ export const metadata: Metadata = {
 
 export default function RootLayout({ children }: LayoutProps<"/">) {
   return (
-    <html lang="id" suppressHydrationWarning className={`${heading.variable} ${body.variable} h-full`}>
+    <html lang="en" suppressHydrationWarning className={`${heading.variable} ${body.variable} h-full`}>
       <body className="min-h-full flex flex-col">
         <ThemeProvider>
           <Navbar />

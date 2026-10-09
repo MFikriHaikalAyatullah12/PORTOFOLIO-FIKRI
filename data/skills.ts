@@ -2,23 +2,23 @@ import type { SkillGroup } from "./types";
 
 export const skillGroups: SkillGroup[] = [
   {
-    name: "Frontend Development",
-    description: "Membangun antarmuka web modern yang cepat, responsif, dan mudah diakses.",
-    skills: ["HTML", "CSS", "JavaScript", "TypeScript", "React", "Next.js", "Tailwind CSS", "UI/UX Design", "Figma", "Git & GitHub"],
+    name: "Coding & Development",
+    description: "Building responsive, full-stack web applications from interface design through functional testing.",
+    skills: ["HTML", "CSS", "JavaScript", "TypeScript", "PHP", "Next.js", "React", "Node.js", "Java", "UI/UX Design"],
   },
   {
-    name: "Data Analysis & Machine Learning",
-    description: "Mengubah data mentah menjadi insight dan model prediktif.",
-    skills: ["Python", "Pandas", "NumPy", "Matplotlib", "Scikit-learn", "SQL", "Visualisasi Data", "Regresi & Klasifikasi"],
+    name: "Data Engineering & Analytics",
+    description: "Turning raw data into insights with databases, machine learning, and natural language processing.",
+    skills: ["Python", "SQL", "PostgreSQL", "Natural Language Processing", "Artificial Intelligence", "Machine Learning", "Deep Learning"],
   },
   {
-    name: "Administrasi & Keuangan",
-    description: "Operasional perkantoran dan pemrosesan data keuangan yang rapi dan akurat.",
-    skills: ["Microsoft Excel", "Pembukuan", "Rekapitulasi Data", "Pengarsipan", "Microsoft Word", "Pelaporan"],
+    name: "Administration & Digital",
+    description: "Accurate data processing and well-organized administrative and finance workflows.",
+    skills: ["Microsoft Word", "Microsoft Excel", "Microsoft PowerPoint", "Data Processing & Analysis", "Document Management", "Archiving", "Finance"],
   },
   {
-    name: "AI & Tools",
-    description: "Memanfaatkan AI untuk mempercepat kerja dan meningkatkan kualitas solusi.",
-    skills: ["Prompt Engineering", "AI-assisted Development", "ChatGPT / Gemini", "GitHub Copilot", "Dasar Jaringan (MTCNA)", "Dasar Cybersecurity"],
+    name: "Soft Skills",
+    description: "Working effectively with people and delivering reliable results.",
+    skills: ["Public Speaking", "Leadership", "Cross-Functional Teamwork", "Time Management", "Critical Thinking", "Problem Solving"],
   },
 ];

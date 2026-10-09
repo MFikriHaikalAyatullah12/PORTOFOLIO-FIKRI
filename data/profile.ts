@@ -3,42 +3,42 @@ import type { Education } from "./types";
 export const profile = {
   name: "M. Fikri Haikal Ayatullah",
   shortName: "M. Fikri Haikal Ayatullah",
-  tagline: "Frontend Developer · Data Analyst · Administrasi & Pengelola Keuangan · AI Enthusiast",
-  location: "Makassar, Sulawesi Selatan",
+  tagline: "Informatics Engineering · Web Developer · Data Analysis · Office Administration · Finance · NLP · Data Science",
+  location: "Makassar, South Sulawesi",
   photo: "/profile.jpg",
   cv: "/cv.pdf",
   email: "mfikrihaikalayatullah154@gmail.com",
   github: "https://github.com/MFikriHaikalAyatullah12",
-  linkedin: "https://www.linkedin.com/in/m-fikri-haikal-ayatullah",
+  linkedin: "https://www.linkedin.com/in/m-fikri-haikal-ayatullah/",
   summary:
-    "Lulusan Teknik Informatika dengan fokus Pengembangan Front-End dan Desain UI/UX. Membangun aplikasi web modern yang responsif dengan Next.js dan TypeScript, didukung kemampuan analisis data menggunakan Python dan SQL, serta pengalaman praktis dalam administrasi dan pemrosesan data keuangan.",
-  // Gunakan **teks** untuk penekanan tebal.
+    "Informatics Engineering graduate specializing in web development, with hands-on experience building responsive full-stack applications using HTML, CSS, JavaScript, TypeScript, Node.js, SQL, Python, and Next.js, supported by practical skills in data processing, data analysis, data science, and AI.",
+  // Use **text** for bold emphasis.
   about:
-    "Lulusan Teknik Informatika yang mengkhususkan diri dalam **Pengembangan Front-End dan Desain UI/UX**, dengan fondasi kuat dalam membangun aplikasi web modern dan responsif menggunakan **HTML, CSS, JavaScript, TypeScript, dan Next.js** dengan kompetensi analitis dalam Python, SQL, dan Machine Learning. Berorientasi pada detail, mudah beradaptasi, dan berkomitmen menghadirkan solusi digital yang efisien dan selaras dengan kebutuhan bisnis. **Dipadukan dengan keahlian praktis dalam manajemen administrasi dan pemrosesan data keuangan, termasuk pengalaman operasional perkantoran pemerintahan serta pembukuan berbasis Excel, yang memberikan pemahaman mendalam terhadap alur kerja bisnis.**",
+    "Informatics Engineering graduate, specializing in web development, with hands-on experience in building responsive web applications using HTML, CSS, JavaScript, TypeScript, Node.js, SQL, Python, and Next.js. Experienced in full-stack web development, including front-end interface development, back-end implementation, database integration, and functional testing. Also equipped with practical skills in data processing, data analysis, data science, and AI, supported by experience in government data processing and administrative workflows. Detail-oriented, adaptable, and committed to developing reliable and user-focused technology solutions.",
   focusAreas: [
     {
-      title: "Frontend Development",
-      description: "Antarmuka web responsif dengan Next.js, TypeScript, dan Tailwind CSS.",
+      title: "Full-Stack Web Development",
+      description: "Responsive web applications with Next.js, React, TypeScript, Node.js, PHP, and SQL — from design through functional testing.",
     },
     {
-      title: "Data Analysis",
-      description: "Eksplorasi, visualisasi, dan pemodelan data dengan Python dan SQL.",
+      title: "Data Engineering & Analytics",
+      description: "Data collection, cleansing, analysis, and insight generation with Python, SQL, and PostgreSQL.",
     },
     {
-      title: "Administrasi & Keuangan",
-      description: "Pembukuan berbasis Excel dan operasional perkantoran pemerintahan.",
+      title: "Administration & Finance",
+      description: "Government data processing, document management, archiving, and finance workflows with Microsoft Office.",
     },
     {
-      title: "AI Enthusiast",
-      description: "Menerapkan machine learning dan AI tools ke dalam solusi nyata.",
+      title: "NLP, AI & Data Science",
+      description: "Natural language processing, machine learning, and deep learning applied to real-world decisions.",
     },
   ],
 };
 
 export const education: Education[] = [
   {
-    institution: "Universitas Muhammadiyah Makassar",
-    degree: "S1 Teknik Informatika",
-    period: "2021 – 2025",
+    institution: "Muhammadiyah University of Makassar",
+    degree: "Bachelor of Informatics Engineering — GPA 3.73 / 4.00",
+    period: "2022 – 2026",
   },
 ];

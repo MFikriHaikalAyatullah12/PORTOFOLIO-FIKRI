@@ -9,11 +9,13 @@ export default function ExperienceItem({ item, isLast }: { item: Experience; isL
         <p className="text-xs font-semibold uppercase tracking-wider text-accent">{item.period}</p>
         <h3 className="mt-1 text-lg font-bold">{item.role}</h3>
         <p className="text-sm text-muted-foreground">{item.organization}</p>
-        <ul className="mt-3 list-disc space-y-1.5 pl-5 text-sm leading-relaxed text-muted-foreground">
-          {item.highlights.map((h) => (
-            <li key={h}>{h}</li>
-          ))}
-        </ul>
+        {item.highlights.length > 0 && (
+          <ul className="mt-3 list-disc space-y-1.5 pl-5 text-sm leading-relaxed text-muted-foreground">
+            {item.highlights.map((h) => (
+              <li key={h}>{h}</li>
+            ))}
+          </ul>
+        )}
       </div>
     </li>
   );

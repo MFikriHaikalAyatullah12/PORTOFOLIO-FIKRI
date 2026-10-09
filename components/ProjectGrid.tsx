@@ -4,16 +4,16 @@ import { useState } from "react";
 import ProjectCard from "./ProjectCard";
 import type { Project, ProjectCategory } from "@/data/types";
 
-type Filter = "Semua" | ProjectCategory;
-const filters: Filter[] = ["Semua", "Web", "Data Analysis"];
+type Filter = "All" | ProjectCategory;
+const filters: Filter[] = ["All", "Web", "Data Analysis"];
 
 export default function ProjectGrid({ projects }: { projects: Project[] }) {
-  const [active, setActive] = useState<Filter>("Semua");
-  const visible = active === "Semua" ? projects : projects.filter((p) => p.category === active);
+  const [active, setActive] = useState<Filter>("All");
+  const visible = active === "All" ? projects : projects.filter((p) => p.category === active);
 
   return (
     <div>
-      <div role="tablist" aria-label="Filter kategori project" className="mb-8 flex flex-wrap gap-2">
+      <div data-print-hide role="tablist" aria-label="Filter projects by category" className="mb-8 flex flex-wrap gap-2">
         {filters.map((f) => (
           <button
             key={f}
@@ -29,7 +29,7 @@ export default function ProjectGrid({ projects }: { projects: Project[] }) {
           >
             {f}
             <span className="ml-2 text-xs opacity-70">
-              {f === "Semua" ? projects.length : projects.filter((p) => p.category === f).length}
+              {f === "All" ? projects.length : projects.filter((p) => p.category === f).length}
             </span>
           </button>
         ))}
