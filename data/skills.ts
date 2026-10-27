@@ -2,23 +2,23 @@ import type { SkillGroup } from "./types";
 
 export const skillGroups: SkillGroup[] = [
   {
-    name: "Coding & Development",
-    description: "Building responsive, full-stack web applications from interface design through functional testing.",
-    skills: ["HTML", "CSS", "JavaScript", "TypeScript", "PHP", "Next.js", "React", "Node.js", "Java", "UI/UX Design"],
+    name: "Pemrograman & Pengembangan",
+    description: "Membangun aplikasi web full-stack yang responsif, dari desain antarmuka hingga pengujian fungsional.",
+    skills: ["HTML", "CSS", "JavaScript", "TypeScript", "PHP", "Next.js", "React", "Node.js", "Java", "Desain UI/UX"],
   },
   {
-    name: "Data Engineering & Analytics",
-    description: "Turning raw data into insights with databases, machine learning, and natural language processing.",
+    name: "Rekayasa Data & Analitik",
+    description: "Mengubah data mentah menjadi insight dengan basis data, machine learning, dan pemrosesan bahasa alami.",
     skills: ["Python", "SQL", "PostgreSQL", "Natural Language Processing", "Artificial Intelligence", "Machine Learning", "Deep Learning"],
   },
   {
-    name: "Administration & Digital",
-    description: "Accurate data processing and well-organized administrative and finance workflows.",
-    skills: ["Microsoft Word", "Microsoft Excel", "Microsoft PowerPoint", "Data Processing & Analysis", "Document Management", "Archiving", "Finance"],
+    name: "Jaringan & Infrastruktur",
+    description: "Menjaga jaringan dan infrastruktur tetap andal, dari konfigurasi hingga pemecahan masalah.",
+    skills: ["Administrasi Jaringan", "Routing & Switching", "Manajemen Bandwidth", "NAT Firewall", "DHCP / DNS / NTP", "Wireless AP & Captive Portal", "Kabel LAN & Diagnostik", "Microsoft Excel"],
   },
   {
     name: "Soft Skills",
-    description: "Working effectively with people and delivering reliable results.",
-    skills: ["Public Speaking", "Leadership", "Cross-Functional Teamwork", "Time Management", "Critical Thinking", "Problem Solving"],
+    description: "Bekerja efektif bersama orang lain dan memberikan hasil yang andal.",
+    skills: ["Public Speaking", "Kepemimpinan", "Kerja Tim Lintas Fungsi", "Manajemen Waktu", "Berpikir Kritis", "Pemecahan Masalah", "Negosiasi & Komunikasi", "Presisi Tinggi"],
   },
 ];

@@ -156,11 +156,12 @@ async function main() {
       console.log(`✓ ${route.padEnd(14)} ${PAGE_WIDTH}×${height}px`);
     }
 
-    merged.setTitle("Portfolio — M. Fikri Haikal Ayatullah");
+    merged.setTitle("Portofolio — M. Fikri Haikal Ayatullah");
     merged.setAuthor("M. Fikri Haikal Ayatullah");
     const bytes = await merged.save();
     for (const t of targets) {
-      await mkdir(path.dirname(t), { recursive: true });
+      // mkdir on a drive root (e.g. D:\) throws EPERM even with recursive: true.
+      if (!existsSync(path.dirname(t))) await mkdir(path.dirname(t), { recursive: true });
       await writeFile(t, bytes);
       console.log(`→ ${t}`);
     }

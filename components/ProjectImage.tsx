@@ -29,7 +29,7 @@ export default function ProjectImage({ src, alt }: ProjectImageProps) {
       <button
         type="button"
         onClick={() => setOpen(true)}
-        aria-label={`View full image: ${alt}`}
+        aria-label={`Lihat gambar penuh: ${alt}`}
         className="group/img relative block aspect-[16/10] w-full cursor-zoom-in overflow-hidden bg-muted"
       >
         <Image
@@ -52,13 +52,13 @@ export default function ProjectImage({ src, alt }: ProjectImageProps) {
             aria-modal="true"
             aria-label={alt}
             onClick={() => setOpen(false)}
-            className="fixed inset-0 z-[100] flex items-center justify-center bg-black/85 p-4 backdrop-blur-sm sm:p-8"
+            className="fixed inset-0 z-[100] flex h-dvh items-center justify-center bg-black/85 p-4 pt-[max(1rem,env(safe-area-inset-top))] backdrop-blur-sm sm:p-8"
           >
             <button
               type="button"
               onClick={() => setOpen(false)}
-              aria-label="Close"
-              className="absolute right-4 top-4 flex h-11 w-11 items-center justify-center rounded-md bg-white/10 text-white transition-colors duration-200 hover:bg-white/20"
+              aria-label="Tutup"
+              className="absolute right-4 top-[max(1rem,env(safe-area-inset-top))] flex h-11 w-11 items-center justify-center rounded-md bg-white/10 text-white transition-colors duration-200 hover:bg-white/20"
             >
               <X size={22} />
             </button>

@@ -8,18 +8,18 @@ import { education, profile } from "@/data/profile";
 import { projects } from "@/data/projects";
 import { certificates } from "@/data/certificates";
 
-export const metadata: Metadata = { title: "About Me" };
+export const metadata: Metadata = { title: "Tentang Saya" };
 
 export default function TentangPage() {
   const stats = [
-    { value: `${projects.length}+`, label: "Projects" },
-    { value: `${certificates.length}`, label: "Certifications" },
-    { value: "4", label: "Areas of expertise" },
+    { value: `${projects.length}+`, label: "Proyek" },
+    { value: `${certificates.length}`, label: "Sertifikasi" },
+    { value: "4", label: "Bidang keahlian" },
   ];
 
   return (
-    <section className="mx-auto max-w-6xl px-5 py-16 sm:px-8 md:py-24">
-      <SectionTitle eyebrow="About Me" title="Who I am and what I do" />
+    <section className="safe-x mx-auto max-w-6xl py-16 md:py-24">
+      <SectionTitle eyebrow="Tentang Saya" title="Siapa saya dan apa yang saya kerjakan" />
 
       <div className="grid items-start gap-12 lg:grid-cols-[0.7fr_1.3fr]">
         <div className="animate-fade-up mx-auto w-full max-w-[280px] sm:max-w-xs lg:sticky lg:top-24">
@@ -29,7 +29,7 @@ export default function TentangPage() {
             <div className="relative aspect-square overflow-hidden rounded-2xl bg-muted shadow-xl ring-1 ring-border">
               <Image
                 src={profile.photo}
-                alt={`Photo of ${profile.name}`}
+                alt={`Foto ${profile.name}`}
                 fill
                 priority
                 sizes="(min-width: 640px) 320px, 280px"
@@ -54,7 +54,7 @@ export default function TentangPage() {
 
           <div className="mt-10">
             <h3 className="flex items-center gap-2 text-lg font-bold">
-              <GraduationCap size={20} className="text-accent" aria-hidden /> Education
+              <GraduationCap size={20} className="text-accent" aria-hidden /> Pendidikan
             </h3>
             <ul className="mt-4 space-y-3">
               {education.map((e) => (
@@ -67,12 +67,12 @@ export default function TentangPage() {
             </ul>
           </div>
 
-          <div data-print-hide className="mt-10 flex flex-wrap gap-3">
-            <Link href="/project" className="inline-flex min-h-12 items-center gap-2 rounded-md bg-primary px-6 text-sm font-semibold text-on-primary transition-colors duration-200 hover:bg-accent hover:text-on-accent">
-              View Projects <ArrowRight size={16} aria-hidden />
+          <div data-print-hide className="mt-10 flex flex-col gap-3 sm:flex-row sm:flex-wrap">
+            <Link href="/project" className="inline-flex min-h-12 items-center justify-center gap-2 rounded-md bg-primary px-6 text-sm font-semibold text-on-primary transition-colors duration-200 hover:bg-accent hover:text-on-accent">
+              Lihat Proyek <ArrowRight size={16} aria-hidden />
             </Link>
-            <Link href="/kontak" className="inline-flex min-h-12 items-center gap-2 rounded-md border border-border bg-card px-6 text-sm font-semibold transition-colors duration-200 hover:border-primary">
-              Contact Me
+            <Link href="/kontak" className="inline-flex min-h-12 items-center justify-center gap-2 rounded-md border border-border bg-card px-6 text-sm font-semibold transition-colors duration-200 hover:border-primary">
+              Hubungi Saya
             </Link>
           </div>
         </div>

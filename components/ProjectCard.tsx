@@ -7,7 +7,7 @@ export default function ProjectCard({ project }: { project: Project }) {
   return (
     <article className="group flex flex-col overflow-hidden rounded-xl border border-border bg-card transition-all duration-200 hover:-translate-y-1 hover:shadow-lg">
       <div className="relative">
-        <ProjectImage src={project.image} alt={`Screenshot of ${project.title}`} />
+        <ProjectImage src={project.image} alt={`Tangkapan layar ${project.title}`} />
         <span className="pointer-events-none absolute left-3 top-3 rounded-md bg-background/90 px-2 py-1 text-xs font-semibold backdrop-blur">
           {project.category}
         </span>

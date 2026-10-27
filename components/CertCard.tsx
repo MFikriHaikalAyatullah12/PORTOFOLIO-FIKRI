@@ -10,7 +10,7 @@ export default function CertCard({ cert }: { cert: Certificate }) {
         {cert.thumbnail ? (
           <Image
             src={cert.thumbnail}
-            alt={`Certificate: ${cert.title}`}
+            alt={`Sertifikat: ${cert.title}`}
             fill
             sizes="(min-width: 1024px) 33vw, (min-width: 640px) 50vw, 100vw"
             className="object-contain p-3 transition-transform duration-300 group-hover:scale-[1.03]"
@@ -18,7 +18,7 @@ export default function CertCard({ cert }: { cert: Certificate }) {
         ) : (
           <div className="flex flex-col items-center gap-2 text-muted-foreground">
             {isPdf ? <FileText size={40} strokeWidth={1.5} /> : <Award size={40} strokeWidth={1.5} />}
-            <span className="text-xs font-semibold uppercase tracking-wider">{isPdf ? "PDF" : "Image"}</span>
+            <span className="text-xs font-semibold uppercase tracking-wider">{isPdf ? "PDF" : "Gambar"}</span>
           </div>
         )}
       </div>
@@ -33,7 +33,7 @@ export default function CertCard({ cert }: { cert: Certificate }) {
           rel="noopener noreferrer"
           className="mt-2 inline-flex min-h-11 items-center justify-center gap-2 rounded-md border border-border px-4 text-sm font-medium transition-colors duration-200 hover:border-primary hover:bg-primary hover:text-on-primary"
         >
-          View Certificate <ExternalLink size={14} />
+          Lihat Sertifikat <ExternalLink size={14} />
         </a>
       </div>
     </article>

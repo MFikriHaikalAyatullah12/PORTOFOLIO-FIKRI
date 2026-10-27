@@ -3,15 +3,15 @@ import SectionTitle from "@/components/SectionTitle";
 import SkillBadge from "@/components/SkillBadge";
 import { skillGroups } from "@/data/skills";
 
-export const metadata: Metadata = { title: "Skills" };
+export const metadata: Metadata = { title: "Keahlian" };
 
 export default function SkillPage() {
   return (
-    <section className="mx-auto max-w-6xl px-5 py-16 sm:px-8 md:py-24">
+    <section className="safe-x mx-auto max-w-6xl py-16 md:py-24">
       <SectionTitle
-        eyebrow="Skills"
-        title="Skills & technologies"
-        description="Grouped by the areas I focus on."
+        eyebrow="Keahlian"
+        title="Keahlian & teknologi"
+        description="Dikelompokkan berdasarkan bidang yang saya tekuni."
       />
       <div className="grid gap-6 md:grid-cols-2">
         {skillGroups.map((group, i) => (

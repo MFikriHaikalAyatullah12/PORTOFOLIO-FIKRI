@@ -1,4 +1,4 @@
-import type { Metadata } from "next";
+import type { Metadata, Viewport } from "next";
 import { Archivo, Space_Grotesk } from "next/font/google";
 import "./globals.css";
 import Navbar from "@/components/Navbar";
@@ -20,16 +20,29 @@ const body = Space_Grotesk({
 
 export const metadata: Metadata = {
   title: {
-    default: `${profile.name} — Portfolio`,
+    default: `${profile.name} — Portofolio`,
     template: `%s · ${profile.shortName}`,
   },
   description: profile.summary,
+  appleWebApp: { title: profile.shortName, statusBarStyle: "black-translucent" },
+  formatDetection: { telephone: false },
+};
+
+export const viewport: Viewport = {
+  width: "device-width",
+  initialScale: 1,
+  // Let content extend under the iOS notch; safe-area padding is applied in CSS.
+  viewportFit: "cover",
+  themeColor: [
+    { media: "(prefers-color-scheme: light)", color: "#fafafa" },
+    { media: "(prefers-color-scheme: dark)", color: "#09090b" },
+  ],
 };
 
 export default function RootLayout({ children }: LayoutProps<"/">) {
   return (
-    <html lang="en" suppressHydrationWarning className={`${heading.variable} ${body.variable} h-full`}>
-      <body className="min-h-full flex flex-col">
+    <html lang="id" suppressHydrationWarning className={`${heading.variable} ${body.variable} h-full`}>
+      <body className="min-h-full flex flex-col overflow-x-hidden">
         <ThemeProvider>
           <Navbar />
           <main className="flex-1">{children}</main>

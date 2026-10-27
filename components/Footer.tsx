@@ -6,7 +6,7 @@ import { profile } from "@/data/profile";
 export default function Footer() {
   return (
     <footer data-print-hide className="border-t border-border">
-      <div className="mx-auto flex max-w-6xl flex-col items-center justify-between gap-4 px-5 py-8 text-sm text-muted-foreground sm:flex-row sm:px-8">
+      <div className="safe-x safe-bottom mx-auto flex max-w-6xl flex-col items-center justify-between gap-4 pt-8 text-sm text-muted-foreground sm:flex-row">
         <p>
           © {new Date().getFullYear()} {profile.name}
         </p>

@@ -3,57 +3,57 @@ import type { Experience } from "./types";
 export const experience: Experience[] = [
   {
     role: "Fullstack Developer",
-    organization: "Unismuh Makassar Primary School",
-    period: "2026 · 4 months",
+    organization: "Sekolah Dasar Unismuh Makassar",
+    period: "2026 · 4 bulan",
     highlights: [
-      "Developed a school finance web interface using HTML, CSS, JavaScript, Node.js, SQL, Python, TypeScript, and Next.js in accordance with project and user requirements.",
-      "Implemented front-end and back-end components and website layouts, from the initial design stage through to functional testing.",
-      "Carried out comprehensive testing of the website's functionality to ensure interface features operate according to project requirements.",
+      "Mengembangkan antarmuka web keuangan sekolah menggunakan HTML, CSS, JavaScript, Node.js, SQL, Python, TypeScript, dan Next.js sesuai kebutuhan proyek dan pengguna.",
+      "Mengimplementasikan komponen front-end dan back-end serta tata letak situs web, mulai dari tahap desain awal hingga pengujian fungsional.",
+      "Melakukan pengujian menyeluruh terhadap fungsionalitas situs web untuk memastikan fitur antarmuka beroperasi sesuai persyaratan proyek.",
     ],
   },
   {
     role: "Fullstack Developer",
-    organization: "Bontomangape Community Health Centre, Galesong Sub-district, Takalar Regency",
-    period: "2026 · 4 months",
+    organization: "Puskesmas Bontomangape, Kecamatan Galesong, Kabupaten Takalar",
+    period: "2026 · 4 bulan",
     highlights: [
-      "Developed responsive web interfaces using HTML, CSS, JavaScript, Node.js, SQL, Python, and TypeScript based on project and user requirements.",
-      "Implemented front-end and back-end components and website layouts from initial design through functional testing.",
-      "Conducted comprehensive testing of website functionality to ensure interface features operated according to project requirements.",
+      "Mengembangkan antarmuka web responsif menggunakan HTML, CSS, JavaScript, Node.js, SQL, Python, dan TypeScript berdasarkan kebutuhan proyek dan pengguna.",
+      "Mengimplementasikan komponen front-end dan back-end serta tata letak situs web dari desain awal hingga pengujian fungsional.",
+      "Melakukan pengujian komprehensif terhadap fungsionalitas situs web untuk memastikan fitur antarmuka beroperasi sesuai persyaratan proyek.",
     ],
   },
   {
     role: "Data Science",
-    organization: "South Sulawesi Department of Industry and Trade",
-    period: "2025 · 2 months",
+    organization: "Dinas Perindustrian dan Perdagangan Sulawesi Selatan",
+    period: "2025 · 2 bulan",
     highlights: [
-      "Conducted analysis on trends in the small and medium-sized enterprise (SME) sector.",
-      "Processed raw data relating to the SME sector in Makassar, from data collection through to data cleansing.",
-      "Utilised deep learning to process data and provide insights to inform the agency's policy decisions.",
+      "Melakukan analisis tren di sektor usaha kecil dan menengah (UKM).",
+      "Memproses data mentah sektor UKM di Makassar, mulai dari pengumpulan data hingga pembersihan data.",
+      "Memanfaatkan deep learning untuk memproses data dan memberikan insight guna mendukung keputusan kebijakan lembaga.",
     ],
   },
   {
-    role: "Intern",
-    organization: "South Sulawesi Department of Industry and Trade",
-    period: "2025 · 3 months",
+    role: "Magang",
+    organization: "Dinas Perindustrian dan Perdagangan Sulawesi Selatan",
+    period: "2025 · 3 bulan",
     highlights: [
-      "Processed and managed domestic trade data to support administrative operations within the department.",
-      "Conducted Microsoft Excel training sessions for department staff to improve data processing workflows.",
-      "Supported administrative data management through accurate processing and organization of departmental information.",
+      "Memproses dan mengelola data perdagangan dalam negeri untuk mendukung operasional administratif di lingkungan dinas.",
+      "Mengadakan sesi pelatihan Microsoft Excel bagi staf dinas untuk meningkatkan alur kerja pemrosesan data.",
+      "Mendukung manajemen data administratif melalui pemrosesan dan pengorganisasian informasi dinas yang akurat.",
     ],
   },
 ];
 
 export const organizations: Experience[] = [
   {
-    role: "Member",
-    organization: "Darul Arqam Foundation — Muhammadiyah University of Makassar",
+    role: "Anggota",
+    organization: "Yayasan Darul Arqam — Universitas Muhammadiyah Makassar",
     period: "2023",
     highlights: [],
   },
   {
-    role: "Secretary for Cadre Affairs",
-    organization: "Muhammadiyah Students' Association",
+    role: "Sekretaris Bidang Kaderisasi",
+    organization: "Ikatan Mahasiswa Muhammadiyah",
     period: "2018",
-    highlights: ["Coordinated activities relating to the recruitment and training of members of the Muhammadiyah Students' Association."],
+    highlights: ["Mengoordinasikan kegiatan perekrutan dan pelatihan anggota Ikatan Mahasiswa Muhammadiyah."],
   },
 ];

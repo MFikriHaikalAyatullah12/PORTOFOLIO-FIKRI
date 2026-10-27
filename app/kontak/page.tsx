@@ -6,19 +6,19 @@ import GithubIcon from "@/components/GithubIcon";
 import LinkedinIcon from "@/components/LinkedinIcon";
 import { profile } from "@/data/profile";
 
-export const metadata: Metadata = { title: "Contact" };
+export const metadata: Metadata = { title: "Kontak" };
 
 export default function KontakPage() {
   return (
     <section className="relative overflow-hidden">
       <div aria-hidden className="grid-bg pointer-events-none absolute inset-0" />
-      <div className="relative mx-auto max-w-3xl px-5 py-16 sm:px-8 md:py-24">
+      <div className="safe-x relative mx-auto max-w-3xl py-16 md:py-24">
         <SectionTitle
           align="center"
-          eyebrow="Contact"
+          eyebrow="Kontak"
           eyebrowClassName="text-sm"
-          title="Let's connect"
-          description="Open to job opportunities, internships, and collaboration. Reach out through any of the channels below."
+          title="Mari terhubung"
+          description="Terbuka untuk peluang kerja, magang, dan kolaborasi. Hubungi saya melalui salah satu kanal di bawah ini."
         />
         <div className="grid gap-4">
           <IconButton href={profile.github} icon={GithubIcon} label="GitHub" value={profile.github.replace("https://", "")} />

@@ -10,14 +10,14 @@ export const certificates: Certificate[] = [
   },
   {
     title: "Cybersecurity Essentials",
-    issuer: "Cisco Networking Academy · Muhammadiyah University of Makassar",
+    issuer: "Cisco Networking Academy · Universitas Muhammadiyah Makassar",
     year: "2025",
     file: "/certificates/netacad-cyber.pdf",
     thumbnail: "/certificates/thumbs/netacad-cyber.jpg",
   },
   {
-    title: "Certificate — Department of Industry and Trade",
-    issuer: "South Sulawesi Department of Industry and Trade",
+    title: "Sertifikat — Dinas Perindustrian dan Perdagangan",
+    issuer: "Dinas Perindustrian dan Perdagangan Sulawesi Selatan",
     year: "2025",
     file: "/certificates/disperindag-sulsel.pdf",
     thumbnail: "/certificates/thumbs/disperindag-sulsel.jpg",
@@ -30,8 +30,8 @@ export const certificates: Certificate[] = [
     thumbnail: "/certificates/thumbs/database.jpg",
   },
   {
-    title: "Morning Class Collaboration Program — Research & Networked Innovation",
-    issuer: "Faculty of Engineering, Unismuh Makassar × University of Kelantan, Malaysia",
+    title: "Program Kolaborasi Kelas Pagi — Research & Networked Innovation",
+    issuer: "Fakultas Teknik Unismuh Makassar × Universiti Kelantan, Malaysia",
     year: "2025",
     file: "/certificates/sertifikat-7.png",
     thumbnail: "/certificates/thumbs/sertifikat-7.jpg",

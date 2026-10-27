@@ -3,42 +3,42 @@ import type { Education } from "./types";
 export const profile = {
   name: "M. Fikri Haikal Ayatullah",
   shortName: "M. Fikri Haikal Ayatullah",
-  tagline: "Informatics Engineering · Web Developer · Data Analysis · Office Administration · Finance · NLP · Data Science",
-  location: "Makassar, South Sulawesi",
+  tagline: "Informatics Engineering · Web Developer · Data Analysis · IT Support · AI Enthusiast · NLP · Data Science",
+  location: "Makassar, Sulawesi Selatan",
   photo: "/profile.jpg",
   cv: "/cv.pdf",
   email: "mfikrihaikalayatullah154@gmail.com",
   github: "https://github.com/MFikriHaikalAyatullah12",
   linkedin: "https://www.linkedin.com/in/m-fikri-haikal-ayatullah/",
   summary:
-    "Informatics Engineering graduate specializing in web development, with hands-on experience building responsive full-stack applications using HTML, CSS, JavaScript, TypeScript, Node.js, SQL, Python, and Next.js, supported by practical skills in data processing, data analysis, data science, and AI.",
-  // Use **text** for bold emphasis.
+    "Lulusan Teknik Informatika dengan spesialisasi pengembangan web, berpengalaman langsung membangun aplikasi full-stack responsif menggunakan HTML, CSS, JavaScript, TypeScript, Node.js, SQL, Python, dan Next.js, didukung keterampilan praktis dalam pengolahan data, analisis data, data science, dan AI.",
+  // Gunakan **teks** untuk penekanan tebal.
   about:
-    "Informatics Engineering graduate, specializing in web development, with hands-on experience in building responsive web applications using HTML, CSS, JavaScript, TypeScript, Node.js, SQL, Python, and Next.js. Experienced in full-stack web development, including front-end interface development, back-end implementation, database integration, and functional testing. Also equipped with practical skills in data processing, data analysis, data science, and AI, supported by experience in government data processing and administrative workflows. Detail-oriented, adaptable, and committed to developing reliable and user-focused technology solutions.",
+    "Lulusan Teknik Informatika dengan spesialisasi pengembangan web, berpengalaman langsung membangun aplikasi web responsif menggunakan HTML, CSS, JavaScript, TypeScript, Node.js, SQL, Python, dan Next.js. Berpengalaman dalam pengembangan web full-stack, mencakup pengembangan antarmuka front-end, implementasi back-end, integrasi basis data, dan pengujian fungsional. Juga dibekali keterampilan praktis dalam pengolahan data, analisis data, data science, dan AI, didukung pengalaman dalam administrasi jaringan dan IT support. Berorientasi pada detail, adaptif, dan berkomitmen mengembangkan solusi teknologi yang andal dan berfokus pada pengguna.",
   focusAreas: [
     {
-      title: "Full-Stack Web Development",
-      description: "Responsive web applications with Next.js, React, TypeScript, Node.js, PHP, and SQL — from design through functional testing.",
+      title: "Pengembangan Web Full-Stack",
+      description: "Aplikasi web responsif dengan Next.js, React, TypeScript, Node.js, PHP, dan SQL — dari desain hingga pengujian fungsional.",
     },
     {
-      title: "Data Engineering & Analytics",
-      description: "Data collection, cleansing, analysis, and insight generation with Python, SQL, and PostgreSQL.",
+      title: "Rekayasa Data & Analitik",
+      description: "Pengumpulan, pembersihan, analisis data, dan penggalian insight dengan Python, SQL, dan PostgreSQL.",
     },
     {
-      title: "Administration & Finance",
-      description: "Government data processing, document management, archiving, and finance workflows with Microsoft Office.",
+      title: "IT Support & Jaringan",
+      description: "Administrasi jaringan (routing, switching, manajemen bandwidth, NAT firewall), layanan jaringan inti, dan pemecahan masalah infrastruktur.",
     },
     {
       title: "NLP, AI & Data Science",
-      description: "Natural language processing, machine learning, and deep learning applied to real-world decisions.",
+      description: "Pemrosesan bahasa alami, machine learning, dan deep learning yang diterapkan pada pengambilan keputusan nyata.",
     },
   ],
 };
 
 export const education: Education[] = [
   {
-    institution: "Muhammadiyah University of Makassar",
-    degree: "Bachelor of Informatics Engineering — GPA 3.73 / 4.00",
+    institution: "Universitas Muhammadiyah Makassar",
+    degree: "Sarjana Teknik Informatika — IPK 3,73 / 4,00",
     period: "2022 – 2026",
   },
 ];
